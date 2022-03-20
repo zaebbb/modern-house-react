@@ -4,7 +4,7 @@ const port = 8080
 
 const app = express()
 app.use(express.static(__dirname))
-app.use(express.static(path.join(__dirname + "build")))
+app.use(express.static(path.join(__dirname, "build")))
 
 app.get("/*", (req, res) => {
     req.sendFile(path.join(__dirname, "build", "index.html"))
